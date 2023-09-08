@@ -1,7 +1,5 @@
-// import { VERCEL_COMMIT_REF } from "$env/static/private";
-
-// export function load() {
-//     return {
-//         deployment
-//     }
-// }
+export const load = async ({ locals: { getSession } }) => {
+	return {
+		session: await getSession()
+	};
+};
